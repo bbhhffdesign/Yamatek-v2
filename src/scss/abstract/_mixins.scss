@@ -13,3 +13,23 @@
         @content;
     }
 }
+
+@mixin glass-bg-only($zIndex1: -1, $bg-color: transparent, $blur: 10px){
+    z-index: 0;
+  
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: $zIndex1;
+      border-radius: inherit; 
+      background: $bg-color; 
+      backdrop-filter: blur($blur);
+      -webkit-backdrop-filter: blur($blur);
+      @content;
+    }
+  
+  }
