@@ -1,0 +1,34 @@
+@font-face {
+    font-family: "title";
+    src: url(/src/assets/fonts/PP_Neue_Machina/PPNeueMachina-InktrapRegular.otf);
+}
+@font-face {
+    font-family: "title bold";
+    src: url(/src/assets/fonts/PP_Neue_Machina/PPNeueMachina-PlainUltrabold.otf);
+}
+@font-face {
+    font-family: "text light";
+    src: url(/src/assets/fonts/Roboto/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: "text";
+    src: url(/src/assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: "text bold";
+    src: url(/src/assets/fonts/Roboto/Roboto-Bold.ttf);
+}
+
+
+h1{
+    font-family: "title";
+    
+    strong{
+        font-family: "title bold";
+    }
+
+}
+
+p{
+    font-family: "text";
+}

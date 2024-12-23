@@ -1,0 +1,15 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
+.txt-tag{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: var(--clr-grey);
+
+
+    img{
+        height: var(--txt-sm);
+    }
+}

@@ -1,0 +1,13 @@
+@use "abstract/variables" as *;
+@use "abstract/mixins" as *;
+
+@forward "./abstract/globales";
+@forward "./components/text-tag";
+@forward "./layout/hero/hero";
+
+
+* {
+  box-sizing: border-box;
+}
+
+
