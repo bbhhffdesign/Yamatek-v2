@@ -16,6 +16,10 @@
     will-change: transform;
     transform: rotate(3deg) translateX(-10%) translateY(-40%);
 
+    @include breakPoint($dev-md){
+      height: 60px;
+    }
+
     @include breakPoint($dev-lg) {
       height: 90px;
       transform: rotate(3deg) translateX(-10%) translateY(-120%);

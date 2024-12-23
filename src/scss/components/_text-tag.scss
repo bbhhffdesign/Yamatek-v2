@@ -20,8 +20,12 @@
         margin: 0 .5rem ;
         font-size: 80%;
 
+        @include breakPoint($dev-md){
+            font-size: 100%;
+        }
+
         @include breakPoint($dev-lg){
-            font-size: 110%;
+            font-size: 120%;
         }
     }
 

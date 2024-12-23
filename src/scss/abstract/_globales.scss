@@ -22,7 +22,9 @@
   src: url(../../src/assets/fonts/Roboto/Roboto-Bold.ttf);
 }
 
-h1 {
+h1,
+h2,
+h3 {
   font-family: "title";
 
   strong {
@@ -30,12 +32,31 @@ h1 {
   }
 }
 
+
 p {
   font-family: "text";
+//   font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
   font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
 
   strong {
     font-family: "text bold";
   }
 
+}
+
+
+.header__text,
+.us__text{
+    padding: 0 1.5rem;
+    text-align: center;
+    
+    @include breakPoint($dev-sm){
+      padding: 0 3rem;
+    }
+    @include breakPoint($dev-md){
+      padding: 0 5rem;
+    }
+    @include breakPoint($dev-lg){
+      text-align: right;
+    }
 }

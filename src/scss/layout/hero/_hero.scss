@@ -11,11 +11,13 @@
 .main {
 
   .main__container {
-    height: 100svh;
+    height: auto;
     align-content: space-between;
   }
 
   .content {
+    height: auto;
+
     .content__img {
 
       @include breakPoint($dev-lg){
@@ -80,18 +82,6 @@ header {
   }
 
   .header__text {
-    padding: 0 1.5rem;
-    text-align: center;
-    @include breakPoint($dev-sm){
-      padding: 0 3rem;
-    }
-    @include breakPoint($dev-md){
-      padding: 0 5rem;
-    }
-    @include breakPoint($dev-lg){
-      text-align: right;
-    }
-
 
     h1 {
       font-size: clamp(3rem, 1.857rem + 5.714vw, 4rem);
