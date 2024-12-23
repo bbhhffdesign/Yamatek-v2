@@ -9,6 +9,8 @@
 
 }
 .main {
+
+  height: 100svh;
   
     header {
       height: inherit;
@@ -56,7 +58,8 @@
       text-align: center;
 
       h1{
-        font-size: 4rem;
+        font-size: 2.5rem;
+        // font-size: 4rem;
         letter-spacing: -5px;
       }
     }
