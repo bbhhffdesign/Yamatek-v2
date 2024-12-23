@@ -8,3 +8,8 @@
 }
 
 
+@mixin breakPoint($device){
+    @media (min-width: $device){
+        @content;
+    }
+}
