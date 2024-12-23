@@ -1,5 +1,5 @@
-@use "../abstract/variables";
-@use "../abstract/mixins";
+@use "../abstract/variables" as *; 
+@use "../abstract/mixins" as *;
 
 .txt-tag{
     display: flex;
@@ -10,6 +10,11 @@
     padding: 0 .5rem .5rem .5rem 0;
     background-color: var(--clr-grey);
     border-radius: var(--txt-sm);
+
+    @include breakPoint($dev-lg){
+        margin: 2rem 0;
+        justify-self: end;
+   }
 
     p{
         margin: 0 .5rem ;

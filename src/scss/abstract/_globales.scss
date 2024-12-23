@@ -1,3 +1,6 @@
+@use "../abstract/mixins" as *;
+@use "../abstract/variables" as *;
+
 @font-face {
     font-family: "title";
     src: url(../../src/assets/fonts/PP_Neue_Machina/PPNeueMachina-InktrapRegular.otf);
@@ -31,4 +34,8 @@ h1{
 
 p{
     font-family: "text";
+
+    @include breakPoint($dev-lg){
+        font-size: 1.5rem;
+    }
 }

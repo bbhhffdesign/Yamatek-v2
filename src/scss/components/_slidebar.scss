@@ -1,31 +1,36 @@
-@use "../abstract/mixins" as*;
+@use "../abstract/mixins" as *;
 @use "../abstract/variables" as *;
 
 .main__container {
-
-    .content__img{
-        overflow: hidden;
-    }
+  .content__img {
+    overflow: hidden;
+  }
 
   .slidebar {
     width: 120%;
     height: 40px;
     display: flex;
     flex-wrap: nowrap;
-    padding: .5rem 0;
+    padding: 0.5rem 0;
     background-color: var(--clr-pink);
     will-change: transform;
     transform: rotate(3deg) translateX(-10%) translateY(-40%);
 
-    .slide{
-        flex: 0 0 100%;
-        @include flex(row, center, center, none);
+    @include breakPoint($dev-lg) {
+      height: 90px;
+      transform: rotate(3deg) translateX(-10%) translateY(-120%);
+    }
 
-        img{
-            height: 100%;
-            width: auto;
-        }
-        
+    .slide {
+      box-sizing: border-box;
+      padding-left: 2rem ;
+      flex: 0 0 100%;
+      @include flex(row, center, center, 2rem);
+
+      img {
+        height: 50%;
+        width: auto;
+      }
     }
   }
 }
