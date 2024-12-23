@@ -19,6 +19,10 @@
     p{
         margin: 0 .5rem ;
         font-size: 80%;
+
+        @include breakPoint($dev-lg){
+            font-size: 110%;
+        }
     }
 
     img{

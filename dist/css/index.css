@@ -62,6 +62,11 @@ p {
   margin: 0 0.5rem;
   font-size: 80%;
 }
+@media (min-width: 64rem) {
+  .txt-tag p {
+    font-size: 110%;
+  }
+}
 .txt-tag img {
   height: calc(var(--txt-sm) + 0.5rem);
 }
@@ -180,7 +185,7 @@ header .header__text h1 br {
 @media (min-width: 64rem) {
   header .header__text h1 {
     text-align: right;
-    font-size: 8rem;
+    font-size: 7rem;
   }
   header .header__text h1 br {
     display: block;
