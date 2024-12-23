@@ -3,11 +3,13 @@
 
 @forward "./abstract/globales";
 @forward "./components/text-tag";
+@forward "./components/slidebar";
 @forward "./layout/hero/hero";
+@forward "./layout/us/us";
 
 
-* {
-  box-sizing: border-box;
-}
+// * {
+//   box-sizing: border-box;
+// }
 
 

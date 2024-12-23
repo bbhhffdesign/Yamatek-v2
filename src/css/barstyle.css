@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+body {
+  background-color: #333;
+  overflow: hidden;
+  margin: 0;
+}
+
+.bar {
+  width: 100%;
+  height: 100px;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* gap: 5%; */
+}
+
+.slide {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: inherit;
+    gap: 5rem;
+    /* margin: 0 2rem; */
+}
+
+.slide img {
+  height: 100px;
+  width: auto;
+}

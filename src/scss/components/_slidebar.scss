@@ -1,0 +1,31 @@
+@use "../abstract/mixins" as*;
+@use "../abstract/variables" as *;
+
+.main__container {
+
+    .content__img{
+        overflow: hidden;
+    }
+
+  .slidebar {
+    width: 120%;
+    height: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: .5rem 0;
+    background-color: var(--clr-pink);
+    will-change: transform;
+    transform: rotate(5deg) translateX(-10%) translateY(-40%);
+
+    .slide{
+        flex: 0 0 100%;
+        @include flex(row, center, center, none);
+
+        img{
+            height: 100%;
+            width: auto;
+        }
+        
+    }
+  }
+}

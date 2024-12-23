@@ -1,8 +1,9 @@
-@use "../../abstract/variables";
-@use "../../abstract/mixins";
+@use "../../abstract/variables" as *;
+@use "../../abstract/mixins" as *;
+
 .wrapper {
   height: auto;
-  background-image: url(/src/assets/img/graph-paper-white.svg);
+  background-image: url(../../src/assets/img/graph-paper-white.svg);
   background-repeat: repeat;
   background-size: auto;
   background-color: var(--clr-pr);
@@ -51,8 +52,8 @@ header {
     text-align: center;
 
     h1 {
-      font-size: 2.5rem;
-      letter-spacing: -5px;
+      font-size: 3rem;
+      letter-spacing: -2px;
     }
   }
 }
