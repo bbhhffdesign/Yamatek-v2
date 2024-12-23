@@ -50,7 +50,14 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    height: 6rem;
+    height: clamp(4rem, 1.037rem + 14.815vw, 5rem);
+
+    @include breakPoint($dev-sm){
+      height: 6rem;
+    }
+    @include breakPoint($dev-md){
+      height: 7rem;
+    }
 
     @include breakPoint($dev-lg){
       height: 8rem;
@@ -73,20 +80,37 @@ header {
   }
 
   .header__text {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     text-align: center;
-    @include breakPoint($dev-lg){
+    @include breakPoint($dev-sm){
       padding: 0 3rem;
+    }
+    @include breakPoint($dev-md){
+      padding: 0 5rem;
+    }
+    @include breakPoint($dev-lg){
       text-align: right;
     }
 
 
     h1 {
-      br{
-        display: none;
-      }
-      font-size: 3rem;
+      font-size: clamp(3rem, 1.857rem + 5.714vw, 4rem);
       letter-spacing: -2px;
+
+      .br-md{
+        display: none;
+
+        @include breakPoint($dev-md){
+          display: block;
+        }
+      }
+      br{
+        @include breakPoint($dev-md){
+          
+            display: none;
+          
+        }
+      }
 
       @include breakPoint($dev-lg){
         text-align: right;
@@ -95,6 +119,11 @@ header {
         br{
           display: block
         }
+      }
+    }
+    p{
+      br{
+        display: none;
       }
     }
   }
