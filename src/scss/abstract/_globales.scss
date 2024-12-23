@@ -32,6 +32,12 @@ h3 {
   }
 }
 
+h2{
+    font-size: clamp(1.5rem, 1.143rem + 1.786vw, 2rem);
+}
+h3{
+    font-size: clamp(1.25rem, 0.893rem + 1.786vw, 1.75rem);
+}
 
 p {
   font-family: "text";
