@@ -17,6 +17,15 @@
 
   .content {
     .content__img {
+
+      @include breakPoint($dev-lg){
+        height: inherit;
+
+        img{
+          height: 100%;
+          width: auto;
+        }
+      }
       img {
         width: 100%;
       }
@@ -24,7 +33,17 @@
   }
 }
 
+header,
+.content{
+
+  @include breakPoint($dev-lg){
+    height: 100svh;
+  }
+}
+
+
 header {
+
   nav {
     display: flex;
     flex-direction: row;
