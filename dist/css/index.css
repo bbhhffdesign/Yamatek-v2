@@ -200,6 +200,8 @@ li strong {
 }
 
 .wrapper {
+max-width: 100vw;
+overflow-x: Hidden;
   height: auto;
   background-image: url(../../src/assets/img/graph-paper-white.svg);
   background-repeat: repeat;
