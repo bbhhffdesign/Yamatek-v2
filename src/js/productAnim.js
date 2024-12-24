@@ -32,7 +32,8 @@ function updateImage(index) {
     // productDescript_2.innerText = productDescripts_2[index];
 }
 
-nextButton.addEventListener("click", () => {
+nextButton.addEventListener("click", (event) => {
+    event.preventDefault();
     if (currentIndex < productImgs.length - 1) {
         
         gsap.to(productImage,{ 
@@ -56,7 +57,8 @@ nextButton.addEventListener("click", () => {
     }
 });
 
-backButton.addEventListener("click", () => {
+backButton.addEventListener("click", (event) => {
+    event.preventDefault();
     if (currentIndex > 0) {
 
         gsap.to(productImage,{
