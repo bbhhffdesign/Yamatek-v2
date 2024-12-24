@@ -32,7 +32,7 @@ function updateImage(index) {
     // productDescript_2.innerText = productDescripts_2[index];
 }
 
-nextButton.addEventListener("click", (event) => {
+nextButton.addEventListener("click", () => {
     // event.preventDefault();
     // event.stopPropagation();
     // window.scrollTo(0, 0);
@@ -59,7 +59,7 @@ nextButton.addEventListener("click", (event) => {
     }
 });
 
-backButton.addEventListener("click", (event) => {
+backButton.addEventListener("click", () => {
     // event.preventDefault();
     // event.stopPropagation();
     // window.scrollTo(0, 0);
