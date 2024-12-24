@@ -1,0 +1,47 @@
+.btn {
+  all: unset;
+  height: 3rem;
+
+  svg {
+    height: inherit;
+    width: auto;
+  }
+
+  .btn-brd {
+    fill: var(--clr-grey);
+    stroke: solid;
+  }
+
+  
+  .btn-crh-ctr {
+    stroke: var(--clr-black);
+    stroke-width: 0.5px;
+  }
+  .btn-crh-in {
+    // stroke: var(--clr-black);
+    stroke-width: 0.5px;
+  }
+  .btn-crh-out {
+    stroke: var(--clr-black);
+    stroke-width: 0.5px;
+  }
+
+  &:hover {
+    .btn-txt{
+        fill: white;
+    }
+    .btn-brd {
+      fill: var(--clr-greydark);
+      stroke: solid;
+    }
+    .btn-brd ,
+    .btn-crh-ctr,
+    .btn-crh-in  {
+      stroke: var(--clr-grey);
+    }
+
+    .btn-crh-out {
+      stroke: none;
+    }
+  }
+}

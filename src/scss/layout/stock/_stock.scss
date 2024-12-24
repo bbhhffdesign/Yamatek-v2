@@ -1,64 +1,83 @@
 @use "../../abstract/variables" as *;
 @use "../../abstract/mixins" as *;
 
-.stock{
-    background-color: black;
-    overflow: hidden;
+.stock {
+  position: relative;
+  background-image: url(../../src/assets/img/graph-paper-white-light.svg);
+  background-repeat: repeat;
+  background-size: auto;
+  background-color: black;
+  margin-top: 10rem;
 
-    .stock__container{
-        height: 100lvh;
+  .stock__container {
+    margin-top: 5rem;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 120%;
+      height: 80px;
+      top: -40px;
+      left: -10%;
+      background-color: var(--clr-pink);
+      transform: rotate(5deg);
     }
+
+    .stock__title__container {
+      color: white;
+    }
+  }
 }
 
-.stock__imgdisplay{
+.stock__imgdisplay {
+  position: relative;
+  @include flex(column, center, center, none);
+
+  .imgdisplay__img {
+    width: 100%;
+    filter: drop-shadow(0 0 20px #f7921e8f);
+  }
+
+  .product__card {
     position: relative;
-    @include flex(column, center, center, none);
-    img{
-        transform: rotate(45deg);
-    }
+    padding: 1rem 0;
+    max-width: 320px;
 
-
-    .product__card{
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: auto;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: auto auto;
-        gap: 1rem;
-        padding: 1rem 0;
-        max-width: 320px;
-        @include glass-bg-only($bg-color: rgba(255, 255, 255, 0.057)){
-            border-radius: 1rem
-        };
-        
-
-
-
-
-        @include breakPoint($dev-md){
-            max-width: $dev-sm
-        }
-
-        .img__container{
-            @include flex(row, center, center, none);
-            
-            img{
-                height: 50px;
-                width: auto;
-            }
-        }
-
-        ul{
-            li{
-                color: white;
-            }
-        }
-        button{
-            width: 100px;
-            margin: 0 auto;
-            grid-column: 1 /-1;
+    ul{
+        padding: 0;
+        li{
+            list-style: square;
         }
     }
+
+    @include breakPoint($dev-md) {
+      max-width: $dev-sm;
+    }
+
+    .img__container {
+      @include flex(row, center, center, none);
+
+      img {
+        height: 50px;
+        width: auto;
+      }
+    }
+
+    ul {
+      li {
+        list-style: none;
+        color: white;
+      }
+    }
+    // button {
+    //   width: 100px;
+    //   margin: 0 auto;
+    //   grid-column: 1 /-1;
+    // }
+  }
 }
+
+
+
+
