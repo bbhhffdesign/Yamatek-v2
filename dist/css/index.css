@@ -162,6 +162,7 @@ li strong {
 .btn {
   all: unset;
   height: 3rem;
+  margin: 3rem 0;
 }
 .btn svg {
   height: inherit;
