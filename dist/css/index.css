@@ -376,7 +376,7 @@ header .header__text p br {
   gap: none;
 }
 .stock__imgdisplay .imgdisplay__container {
-  height: 50vh;
+  height: 50lvh;
 }
 .stock__imgdisplay .imgdisplay__back,
 .stock__imgdisplay .imgdisplay__next {
