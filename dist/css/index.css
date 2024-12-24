@@ -376,7 +376,8 @@ header .header__text p br {
   gap: none;
 }
 .stock__imgdisplay .imgdisplay__container .imgdisplay__img {
-  min-height: 500px;
+  width: 100%;
+  height: auto;
 }
 .stock__imgdisplay .imgdisplay__back,
 .stock__imgdisplay .imgdisplay__next {
@@ -400,7 +401,6 @@ header .header__text p br {
           clip-path: polygon(53% 50%, 1% 62%, 0 38%);
 }
 .stock__imgdisplay .imgdisplay__img {
-  min-height: 500px;
   filter: drop-shadow(0 0 20px rgba(247, 146, 30, 0.5607843137));
 }
 .stock__imgdisplay .product__card {

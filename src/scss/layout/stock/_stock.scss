@@ -37,9 +37,9 @@
   .imgdisplay__container{
 
     .imgdisplay__img{
-      min-height: 500px;
-      // width: 100%;
-      // height: auto;
+      // min-height: 500px;
+      width: 100%;
+      height: auto;
     }
 
   }
@@ -67,7 +67,6 @@
   }
 
   .imgdisplay__img {
-    min-height: 500px;
     filter: drop-shadow(0 0 20px #f7921e8f);
   }
 
