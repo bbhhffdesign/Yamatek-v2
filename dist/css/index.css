@@ -397,7 +397,7 @@ header .header__text p br {
           clip-path: polygon(53% 50%, 1% 62%, 0 38%);
 }
 .stock__imgdisplay .imgdisplay__img {
-  width: 100lvw;
+  height: 500px;
   filter: drop-shadow(0 0 20px rgba(247, 146, 30, 0.5607843137));
 }
 .stock__imgdisplay .product__card {
