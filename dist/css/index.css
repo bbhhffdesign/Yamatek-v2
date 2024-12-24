@@ -375,6 +375,9 @@ header .header__text p br {
   align-items: center;
   gap: none;
 }
+.stock__imgdisplay .imgdisplay__container .imgdisplay__img {
+  min-height: 500px;
+}
 .stock__imgdisplay .imgdisplay__back,
 .stock__imgdisplay .imgdisplay__next {
   all: unset;
