@@ -29,6 +29,7 @@
 }
 body {
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 h1,
@@ -373,6 +374,23 @@ header .header__text p br {
   justify-content: center;
   align-items: center;
   gap: none;
+}
+.stock__imgdisplay .imgdisplay__container {
+  height: 50vh;
+}
+.stock__imgdisplay .imgdisplay__back,
+.stock__imgdisplay .imgdisplay__next {
+  all: unset;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 10%;
+  background-color: red;
+  left: 0;
+}
+.stock__imgdisplay .imgdisplay__next {
+  left: auto;
+  right: 0;
 }
 .stock__imgdisplay .imgdisplay__img {
   width: 100%;

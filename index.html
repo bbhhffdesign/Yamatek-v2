@@ -132,7 +132,7 @@
                 class="pure-img"
               />
               <div class="us__card__text">
-                <p>Mejores<strong>Corizaciones</strong></p>
+                <p>Mejores<strong> Cotizaciones</strong></p>
               </div>
             </article>
             <article class="us__card">
@@ -142,7 +142,7 @@
                 class="pure-img"
               />
               <div class="us__card__text">
-                <p>Atención<strong>Personalizada</strong></p>
+                <p>Atención<strong> Personalizada</strong></p>
               </div>
             </article>
           </div>
@@ -160,28 +160,22 @@
           </div>
 
           <div class="stock__imgdisplay">
-            <img
+            <div class="imgdisplay__container">
+              <button class="imgdisplay__back">B</button>
+              <img id="productImg"
               class="imgdisplay__img"
               src="src/assets/img/componentesHardware/gtx1080.png"
-              alt=""
-            />
+              />
+              <button class="imgdisplay__next">N</button>
+            </div>
 
             <div class="product__card">
-              <!-- <div class="img__container">
-                <img
-                  src="src/assets/img/componentesHardware/gtx1080.png"
-                  alt=""
-                />
-              </div> -->
               <ul>
                 <li id="productName"><h3> GeForce GTX 1080</h3></li>
                 <li id="productDescript-1">Lorem, ipsum dolor.lorem3 Lorem, ipsum.</li>
                 <li id="productDescript-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, dolores!</li>
               </ul>
-              <button class="btn">
-                <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                <!-- Created with Inkscape (http://www.inkscape.org/) -->
-
+              <button class="btn" id="btnStock">
                 <svg
                   width="50.800022mm"
                   height="15.563665mm"
@@ -244,5 +238,6 @@
     <script src="src/js/infinite_slidebar.js"></script>
     <script src="src/js/hero_anim.js"></script>
     <script src="src/js/imgdisplay.js"></script>
+    <script src="src/js/productAnim.js"></script>
   </body>
 </html>
