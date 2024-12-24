@@ -375,6 +375,9 @@ header .header__text p br {
   align-items: center;
   gap: none;
 }
+.stock__imgdisplay .imgdisplay__container {
+  overflow: hidden;
+}
 .stock__imgdisplay .imgdisplay__container .imgdisplay__img {
   width: 100%;
   height: auto;
