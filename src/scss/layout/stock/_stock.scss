@@ -46,12 +46,19 @@
     position: absolute;
     height: 100%;
     width: 10%;
-    background-color: red;
+    background-color: rgba(255, 255, 255, 0.328);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.27));
     left: 0;
+  }
+  .imgdisplay__back{
+    // clip-path: polygon(0 50%, 100% 62%, 99% 38%);
+    clip-path: polygon(53% 50%, 100% 62%, 99% 38%);
   }
   .imgdisplay__next{
     left: auto;
     right: 0;
+    // clip-path: polygon(100% 50%, 0 62%, 0 38%);
+    clip-path: polygon(53% 50%, 1% 62%, 0 38%);
   }
 
   .imgdisplay__img {
