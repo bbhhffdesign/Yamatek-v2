@@ -35,6 +35,9 @@ function updateImage(index) {
 nextButton.addEventListener("click", (event) => {
     event.preventDefault();
     event.stopPropagation();
+
+    const currentScroll = window.scrollY;
+
     if (currentIndex < productImgs.length - 1) {
         
         gsap.to(productImage,{ 
@@ -49,7 +52,8 @@ nextButton.addEventListener("click", (event) => {
                     duration :.5
                 },{
                     x: "0%",
-                    duration: .5
+                    duration: .5,
+                    onUpdate: () => window.scrollTo(0, currentScroll)
                 })
             }            
         })
@@ -61,6 +65,9 @@ nextButton.addEventListener("click", (event) => {
 backButton.addEventListener("click", (event) => {
     event.preventDefault();
     event.stopPropagation();
+    
+    const currentScroll = window.scrollY;
+
     if (currentIndex > 0) {
 
         gsap.to(productImage,{
@@ -75,7 +82,8 @@ backButton.addEventListener("click", (event) => {
                     duration :.5
                 },{
                     x: "0%",
-                    duration: .5
+                    duration: .5,
+                    onUpdate: () => window.scrollTo(0, currentScroll)
                 })
             }
         })
