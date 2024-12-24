@@ -32,9 +32,9 @@ function updateImage(index) {
     // productDescript_2.innerText = productDescripts_2[index];
 }
 
-nextButton.addEventListener("click", () => {
-    // event.preventDefault();
-    // event.stopPropagation();
+nextButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
     // window.scrollTo(0, 0);
     if (currentIndex < productImgs.length - 1) {
         
@@ -59,9 +59,9 @@ nextButton.addEventListener("click", () => {
     }
 });
 
-backButton.addEventListener("click", () => {
-    // event.preventDefault();
-    // event.stopPropagation();
+backButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
     // window.scrollTo(0, 0);
     if (currentIndex > 0) {
 
