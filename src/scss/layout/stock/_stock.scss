@@ -37,8 +37,8 @@
   .imgdisplay__container{
 
     .imgdisplay__img{
-      width: 100%;
-      height: auto;
+      // width: 100%;
+      // height: auto;
     }
 
   }
@@ -66,8 +66,7 @@
   }
 
   .imgdisplay__img {
-    // height: 100%;
-    width: 100%;
+    width: 100lvw;
     filter: drop-shadow(0 0 20px #f7921e8f);
   }
 
