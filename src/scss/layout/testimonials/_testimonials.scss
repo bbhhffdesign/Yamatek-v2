@@ -1,0 +1,90 @@
+@use "../../abstract/variables" as *;
+@use "../../abstract/mixins" as *;
+
+.testimonials {
+  .testimonials__container {
+    .testimonials__text {
+      .testimonials__title {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.testimonials__cards {
+
+  .testimonial__card {
+    @include flex(column, center, center, none);
+    position: relative;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: left;
+    
+    
+    &::before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        backdrop-filter: blur(2px);
+        z-index: -1;
+    }
+
+    img {
+      height: 20px;
+      width: auto;
+    }
+
+    &:nth-child(odd) {
+      clip-path: polygon(
+        14% 0,
+        86% 0,
+        100% 0,
+        100% 66%,
+        86% 100%,
+        14% 100%,
+        0 100%,
+        0 34%
+      );
+      &::before{
+        background-color: #ffffff6c;
+      }
+
+      img {
+        align-self: flex-end;
+      }
+    }
+    &:nth-child(even) {
+    //   background-color: #333;
+      clip-path: polygon(
+        20% 0%,
+        86% 0,
+        100% 34%,
+        100% 100%,
+        86% 100%,
+        14% 100%,
+        0 66%,
+        0 0
+      );
+      &::before{
+        background-color: #5f5f5f5b;
+      }
+      h4 {
+        text-align: right;
+      }
+      img {
+        align-self: flex-start;
+      }
+    }
+
+
+    &:hover{
+        color: var(--clr-grey);
+        img{
+            filter: invert(100%);
+        }
+        &::before{
+            background-color: #0000006d;
+        }
+    }
+  }
+}

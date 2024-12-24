@@ -31,6 +31,10 @@ body {
   overflow-x: hidden;
 }
 
+.wrapper {
+  overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -435,4 +439,64 @@ header .header__text p br {
 .stock__imgdisplay .product__card ul li {
   list-style: none;
   color: white;
+}
+
+.testimonials .testimonials__container .testimonials__text .testimonials__title {
+  text-align: center;
+}
+
+.testimonials__cards .testimonial__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: none;
+  position: relative;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: left;
+}
+.testimonials__cards .testimonial__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  z-index: -1;
+}
+.testimonials__cards .testimonial__card img {
+  height: 20px;
+  width: auto;
+}
+.testimonials__cards .testimonial__card:nth-child(odd) {
+  -webkit-clip-path: polygon(14% 0, 86% 0, 100% 0, 100% 66%, 86% 100%, 14% 100%, 0 100%, 0 34%);
+          clip-path: polygon(14% 0, 86% 0, 100% 0, 100% 66%, 86% 100%, 14% 100%, 0 100%, 0 34%);
+}
+.testimonials__cards .testimonial__card:nth-child(odd)::before {
+  background-color: rgba(255, 255, 255, 0.4235294118);
+}
+.testimonials__cards .testimonial__card:nth-child(odd) img {
+  align-self: flex-end;
+}
+.testimonials__cards .testimonial__card:nth-child(even) {
+  -webkit-clip-path: polygon(20% 0%, 86% 0, 100% 34%, 100% 100%, 86% 100%, 14% 100%, 0 66%, 0 0);
+          clip-path: polygon(20% 0%, 86% 0, 100% 34%, 100% 100%, 86% 100%, 14% 100%, 0 66%, 0 0);
+}
+.testimonials__cards .testimonial__card:nth-child(even)::before {
+  background-color: rgba(95, 95, 95, 0.3568627451);
+}
+.testimonials__cards .testimonial__card:nth-child(even) h4 {
+  text-align: right;
+}
+.testimonials__cards .testimonial__card:nth-child(even) img {
+  align-self: flex-start;
+}
+.testimonials__cards .testimonial__card:hover {
+  color: var(--clr-grey);
+}
+.testimonials__cards .testimonial__card:hover img {
+  filter: invert(100%);
+}
+.testimonials__cards .testimonial__card:hover::before {
+  background-color: rgba(0, 0, 0, 0.4274509804);
 }/*# sourceMappingURL=index.css.map */
