@@ -35,8 +35,12 @@
   @include flex(column, center, center, none);
 
   .imgdisplay__container{
-    // position: relative;
-    height: 50lvh;
+
+    .imgdisplay__img{
+      width: 100%;
+      height: auto;
+    }
+
   }
 
   .imgdisplay__back,
