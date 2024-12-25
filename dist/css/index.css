@@ -1,5 +1,6 @@
 :root {
   --clr-pr: #f7931e;
+  --clr-orange: #ff6700;
   --clr-pink: #f95047;
   --clr-grey: #e8e8e8;
   --clr-black: #000;
@@ -499,4 +500,42 @@ header .header__text p br {
 }
 .testimonials__cards .testimonial__card:hover::before {
   background-color: rgba(0, 0, 0, 0.4274509804);
+}
+
+.parallax {
+  position: relative;
+  background-color: var(--clr-orange);
+  background-image: url(../../src/assets/img/Footer.svg);
+  background-attachment: fixed;
+  background-position: 50% 95%;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  height: 55lvh;
+}
+
+footer {
+  background-color: black;
+  color: var(--clr-grey);
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: none;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.logo__container .logo__text {
+  margin: 0;
+  font-size: 80%;
+}
+.logo__container img {
+  filter: invert(100%);
+  height: 30px;
+  width: auto;
 }/*# sourceMappingURL=index.css.map */
