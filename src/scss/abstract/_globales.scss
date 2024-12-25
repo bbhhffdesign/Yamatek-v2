@@ -27,7 +27,7 @@ body{
 }
 .wrapper{
   overflow-x: hidden;
-  
+ 
 }
 
 h1,
@@ -38,6 +38,15 @@ h4{
 
   strong {
     font-family: "title bold";
+  }
+}
+
+h1 {
+  font-size: clamp(3rem, 1.857rem + 5.714vw, 4rem);
+  letter-spacing: -2px;
+
+  @include breakPoint($dev-lg){
+    font-size: clamp(5rem, -1rem + 7.5vw, 8rem);
   }
 }
 
@@ -77,6 +86,11 @@ li {
       padding: 0 5rem;
     }
     @include breakPoint($dev-lg){
+      padding: 0;
       text-align: right;
     }
 }
+
+
+//paddings
+

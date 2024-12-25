@@ -19,9 +19,9 @@
     height: auto;
 
     .content__img {
-
+    
       @include breakPoint($dev-lg){
-        height: inherit;
+        height: 100%;
 
         .hero-img{
           height: 100%;
@@ -82,11 +82,7 @@ header {
   }
 
   .header__text {
-
     h1 {
-      font-size: clamp(3rem, 1.857rem + 5.714vw, 4rem);
-      letter-spacing: -2px;
-
       .br-md{
         display: none;
 
@@ -96,16 +92,14 @@ header {
       }
       br{
         @include breakPoint($dev-md){
-          
             display: none;
-          
         }
       }
 
       @include breakPoint($dev-lg){
-        text-align: right;
-        font-size: 7rem;
-
+        .br-md{
+          display: none;
+        }
         br{
           display: block
         }
@@ -115,6 +109,17 @@ header {
       br{
         display: none;
       }
+    }
+  }
+}
+
+.header__text {
+  @include breakPoint($dev-lg){
+      box-sizing: border-box;
+      padding: 0 3rem;
+    h1,
+    p{
+      text-align: left;
     }
   }
 }

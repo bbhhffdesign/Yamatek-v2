@@ -49,6 +49,16 @@ h4 strong {
   font-family: "title bold";
 }
 
+h1 {
+  font-size: clamp(3rem, 1.857rem + 5.714vw, 4rem);
+  letter-spacing: -2px;
+}
+@media (min-width: 64rem) {
+  h1 {
+    font-size: clamp(5rem, -1rem + 7.5vw, 8rem);
+  }
+}
+
 h2 {
   font-size: clamp(1.5rem, 1.143rem + 1.786vw, 2rem);
 }
@@ -86,6 +96,7 @@ li strong {
 @media (min-width: 64rem) {
   .header__text,
   .us__text {
+    padding: 0;
     text-align: right;
   }
 }
@@ -126,7 +137,9 @@ li strong {
 }
 
 .main__container .content__img {
-  overflow: hidden;
+  padding-bottom: 4rem;
+  -webkit-clip-path: inset(0px -100vw 0px 0px);
+          clip-path: inset(0px -100vw 0px 0px);
 }
 .main__container .slidebar {
   width: 120%;
@@ -146,7 +159,7 @@ li strong {
 @media (min-width: 64rem) {
   .main__container .slidebar {
     height: 90px;
-    transform: rotate(3deg) translateX(-10%) translateY(-120%);
+    transform: rotate(3deg) translateX(-10%) translateY(-70%);
   }
 }
 .main__container .slidebar .slide {
@@ -221,7 +234,7 @@ li strong {
 }
 @media (min-width: 64rem) {
   .main .content .content__img {
-    height: inherit;
+    height: 100%;
   }
   .main .content .content__img .hero-img {
     height: 100%;
@@ -277,10 +290,6 @@ header nav aside::after {
   background-color: rgb(0, 0, 0);
   right: -2px;
 }
-header .header__text h1 {
-  font-size: clamp(3rem, 1.857rem + 5.714vw, 4rem);
-  letter-spacing: -2px;
-}
 header .header__text h1 .br-md {
   display: none;
 }
@@ -295,9 +304,8 @@ header .header__text h1 .br-md {
   }
 }
 @media (min-width: 64rem) {
-  header .header__text h1 {
-    text-align: right;
-    font-size: 7rem;
+  header .header__text h1 .br-md {
+    display: none;
   }
   header .header__text h1 br {
     display: block;
@@ -307,13 +315,51 @@ header .header__text p br {
   display: none;
 }
 
+@media (min-width: 64rem) {
+  .header__text {
+    box-sizing: border-box;
+    padding: 0 3rem;
+  }
+  .header__text h1,
+  .header__text p {
+    text-align: left;
+  }
+}
+
+.us .piechart__container {
+  display: none;
+}
+@media (min-width: 64rem) {
+  .us .piechart__container {
+    display: block;
+    width: 100%;
+  }
+  .us .piechart__container #myChart {
+    height: inherit;
+    width: auto;
+  }
+}
+
 @media (min-width: 48rem) {
   .us__text h3 br {
     display: none;
   }
 }
+@media (min-width: 64rem) {
+  .us__text {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: none;
+    text-align: center;
+    padding: 3rem;
+  }
+}
 
 .us__content {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -325,6 +371,11 @@ header .header__text p br {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 64rem) {
+  .us__content {
+    padding: 2rem;
   }
 }
 .us__content .us__card {
@@ -442,6 +493,19 @@ header .header__text p br {
   color: white;
 }
 
+.testimonials .testimonials__container {
+  padding: 1rem;
+}
+@media (min-width: 35.5rem) {
+  .testimonials .testimonials__container {
+    padding: 2rem;
+  }
+}
+@media (min-width: 48rem) {
+  .testimonials .testimonials__container {
+    padding: 4rem;
+  }
+}
 .testimonials .testimonials__container .testimonials__text .testimonials__title {
   text-align: center;
 }
@@ -453,9 +517,20 @@ header .header__text p br {
   align-items: center;
   gap: none;
   position: relative;
+  text-align: left;
   margin: 1rem;
   padding: 1rem;
-  text-align: left;
+}
+@media (min-width: 35.5rem) {
+  .testimonials__cards .testimonial__card {
+    padding: 2rem;
+    margin: 1.5rem;
+  }
+}
+@media (min-width: 48rem) {
+  .testimonials__cards .testimonial__card {
+    margin: 2rem;
+  }
 }
 .testimonials__cards .testimonial__card::before {
   content: "";
@@ -516,8 +591,18 @@ header .header__text p br {
 footer {
   background-color: black;
   color: var(--clr-grey);
-  padding: 1rem;
   text-align: center;
+  padding: 1rem;
+}
+@media (min-width: 35.5rem) {
+  footer {
+    padding: 1rem 2rem;
+  }
+}
+@media (min-width: 48rem) {
+  footer {
+    padding: 1rem 4rem;
+  }
 }
 
 .logo__container {

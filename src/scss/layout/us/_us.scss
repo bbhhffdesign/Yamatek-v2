@@ -1,9 +1,25 @@
 @use "../../abstract/variables" as *;
 @use "../../abstract/mixins" as *;
 
-.us__text{
-    // margin-bottom: 5rem;
+.us{
+    .piechart__container{
+        display: none;
 
+        @include breakPoint($dev-lg){
+            display: block;
+            width: 100%;
+            // height: 50vh;
+
+
+            #myChart{
+                height: inherit;
+                width: auto;
+            }
+        }
+    }
+}
+
+.us__text{
     h3{
         br{
             @include breakPoint($dev-md){
@@ -11,17 +27,26 @@
             }
         }
     }
+    @include breakPoint($dev-lg){
+        box-sizing: border-box;
+        @include flex(column, center, center, none);
+        text-align: center;
+        padding: 3rem;
+
+    }
 }
 
 .us__content{
+    box-sizing: border-box;
     @include flex(column, center, center, none);
     @include breakPoint($dev-md){
-        // flex-direction: row;
-        // flex-wrap: wrap
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         
+    }
+    @include breakPoint($dev-lg){
+        padding: 2rem
     }
 
     .us__card{
@@ -40,6 +65,5 @@
                 // width: 50%;
             }
         }
-
     }
 }

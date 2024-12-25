@@ -2,8 +2,11 @@
 @use "../abstract/variables" as *;
 
 .main__container {
+  // overflow-x: hidden;
   .content__img {
-    overflow: hidden;
+    padding-bottom: 4rem;
+    clip-path: inset(0px -100vw 0px 0px);
+
   }
 
   .slidebar {
@@ -22,7 +25,7 @@
 
     @include breakPoint($dev-lg) {
       height: 90px;
-      transform: rotate(3deg) translateX(-10%) translateY(-120%);
+      transform: rotate(3deg) translateX(-10%) translateY(-70%);
     }
 
     .slide {
