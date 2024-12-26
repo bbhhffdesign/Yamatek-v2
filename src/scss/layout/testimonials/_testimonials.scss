@@ -3,17 +3,38 @@
 
 .testimonials {
   .testimonials__container {
-
     padding: 1rem;
-    
-    @include breakPoint($dev-sm){
+
+    @include breakPoint($dev-sm) {
       padding: 2rem;
     }
-    @include breakPoint($dev-md){
+    @include breakPoint($dev-md) {
       padding: 4rem;
+    }
+    @include breakPoint($dev-lg) {
+      @include flex(row-reverse, center, flex-start, none);
+    }
+    .testimonials__text,
+    .testimonials__cards {
+      flex: 1;
     }
 
     .testimonials__text {
+      @include breakPoint($dev-lg) {
+        @include flex(column, center, center, none);
+      }
+      .testimonials__img__container {
+        display: none;
+        @include breakPoint($dev-lg) {
+          margin-top: 5rem;
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+        @include breakPoint($dev-xxlg){
+          margin-top: 0;
+        }
+      }
       .testimonials__title {
         text-align: center;
       }
@@ -22,6 +43,9 @@
 }
 
 .testimonials__cards {
+  @include breakPoint($dev-lg) {
+    //  width: 50vw;
+  }
 
   .testimonial__card {
     @include flex(column, center, center, none);
@@ -29,23 +53,21 @@
     text-align: left;
     margin: 1rem;
     padding: 1rem;
-    
-    @include breakPoint($dev-sm){
+
+    @include breakPoint($dev-sm) {
       padding: 2rem;
       margin: 1.5rem;
     }
-    @include breakPoint($dev-md){
+    @include breakPoint($dev-md) {
       margin: 2rem;
     }
 
-    
-    
-    &::before{
-        content: '';
-        position: absolute;
-        inset: 0;
-        backdrop-filter: blur(2px);
-        z-index: -1;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      backdrop-filter: blur(2px);
+      z-index: -1;
     }
 
     img {
@@ -64,7 +86,7 @@
         0 100%,
         0 34%
       );
-      &::before{
+      &::before {
         background-color: #ffffff6c;
       }
 
@@ -73,7 +95,7 @@
       }
     }
     &:nth-child(even) {
-    //   background-color: #333;
+      //   background-color: #333;
       clip-path: polygon(
         20% 0%,
         86% 0,
@@ -84,7 +106,7 @@
         0 66%,
         0 0
       );
-      &::before{
+      &::before {
         background-color: #5f5f5f5b;
       }
       h4 {
@@ -95,15 +117,14 @@
       }
     }
 
-
-    &:hover{
-        color: var(--clr-grey);
-        img{
-            filter: invert(100%);
-        }
-        &::before{
-            background-color: #0000006d;
-        }
+    &:hover {
+      color: var(--clr-grey);
+      img {
+        filter: invert(100%);
+      }
+      &::before {
+        background-color: #0000006d;
+      }
     }
   }
 }

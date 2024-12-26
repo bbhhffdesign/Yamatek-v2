@@ -10,6 +10,15 @@
     background-repeat: no-repeat;
     background-size: 50%;
     height: 55lvh;
+
+    @include breakPoint($dev-lg){
+        background-size: 25%;
+        height: 100lvh;
+    }
+    @include breakPoint($dev-xlg){
+        background-size: 30%;
+        height: 70lvh;
+    }
     
 }
 
