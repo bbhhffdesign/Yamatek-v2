@@ -8,13 +8,15 @@
   background-size: auto;
   background-color: black;
   margin-top: 10rem;
+  @include breakPoint($dev-lg){
+    margin-top: 0;
+  }
 
   .stock__container {
     margin-top: 5rem;
     text-align: center;
     
     @include breakPoint($dev-lg){
-      // max-height: 100lvh;
       @include flex(column, center, center, none);
     }
 
@@ -27,6 +29,7 @@
       left: -10%;
       background-color: var(--clr-pink);
       transform: rotate(5deg);
+      z-index: 2;
 
       @include breakPoint($dev-lg){
         transform: rotate(2deg);

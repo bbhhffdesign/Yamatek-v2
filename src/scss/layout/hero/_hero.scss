@@ -13,12 +13,17 @@
   .main__container {
     height: auto;
     align-content: space-between;
+
+    @include breakPoint($dev-lg){
+      height: 100svh;
+    }
   }
 
   .content {
-    height: auto;
+    position: relative;
 
     .content__img {
+      position: relative;
     
       @include breakPoint($dev-lg){
         height: 100%;
@@ -41,7 +46,7 @@ header,
 .content{
 
   @include breakPoint($dev-lg){
-    height: 100svh;
+    height: inherit;
   }
 }
 
@@ -57,11 +62,14 @@ header {
     @include breakPoint($dev-sm){
       height: 6rem;
     }
-    @include breakPoint($dev-md){
-      height: 7rem;
-    }
+    // @include breakPoint($dev-md){
+    //   height: 7rem;
+    // }
 
-    @include breakPoint($dev-lg){
+    @include breakPoint($dev-xlg){
+      height: 6rem;
+    }
+    @include breakPoint($dev-xxlg){
       height: 8rem;
     }
 
@@ -114,12 +122,14 @@ header {
 }
 
 .header__text {
+  
   @include breakPoint($dev-lg){
+    @include flex(column, center, flex-end, none);
       box-sizing: border-box;
       padding: 0 3rem;
     h1,
     p{
-      text-align: left;
+      text-align: right;
     }
   }
 }
