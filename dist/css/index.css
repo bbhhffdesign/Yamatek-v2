@@ -481,7 +481,8 @@ header .header__text p br {
   position: relative;
   background-color: black;
   margin-top: 10rem;
-  z-index: 2;
+  background-image: url("/src/assets/img/componentesHardware/gtx1080.png");
+  background-position: center;
 }
 @media (min-width: 64rem) {
   .stock {
@@ -531,6 +532,7 @@ header .header__text p br {
 }
 .stock__imgdisplay .imgdisplay__container {
   overflow: hidden;
+  width: 100vw;
 }
 .stock__imgdisplay .imgdisplay__container .imgdisplay__img {
   width: 100%;
@@ -726,7 +728,7 @@ header .header__text p br {
 .parallax {
   position: relative;
   background-color: var(--clr-orange);
-  background-image: url(../../src/assets/img/Footer.svg);
+  background-image: url("../../src/assets/img/Footer.svg");
   background-attachment: fixed;
   background-position: 50% 95%;
   background-repeat: no-repeat;

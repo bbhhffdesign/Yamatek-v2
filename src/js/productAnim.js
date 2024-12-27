@@ -1,4 +1,5 @@
 const productImage = document.getElementById("productImg")
+const productBg = document.getElementById("stock00")
 const productName = document.getElementById("productName")
 const productDescript_1 = document.getElementById("productDescript-1")
 const productDescript_2 = document.getElementById("productDecript-2")
@@ -11,7 +12,7 @@ const preloadedImages = [];
 
 const productImgs = [
     "src/assets/img/componentesHardware/gtx1080.png",
-    "src/assets/img/componentesHardware/gtx1650.png",
+    "src/assets/img/componentesHardware/gtx1650_squared.png",
     "src/assets/img/componentesHardware/intelI9.png"
 ]
 const productNames = [
@@ -33,19 +34,25 @@ function preloadImages() {
     });
 }
 preloadImages();
+
+// productBg.style.backgroundImage = preloadedImages[1];
     
 // ]
 let currentIndex = 0; 
 
+// url("/src/assets/img/componentesHardware/gtx1080.png")
+
 function updateImage(index) {
     productImage.src = productImgs[index];
+    productBg.style.backgroundImage = 'url("../'+productImgs[index]+'")';
+    // console.log( 'url("../'+productImgs[index]+'")');
+    
     productName.innerText = productNames[index];
     productDescript_1.innerText = productDescripts_1[index];
 }
 
 nextButton.addEventListener("click", (event) => {
     event.preventDefault();
-    event.stopPropagation();
 
     const currentScroll = window.scrollY;
 
@@ -76,8 +83,7 @@ nextButton.addEventListener("click", (event) => {
 
 backButton.addEventListener("click", (event) => {
     event.preventDefault();
-    event.stopPropagation();
-    
+
     const currentScroll = window.scrollY;
 
     if (currentIndex > 0) {
