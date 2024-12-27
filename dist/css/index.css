@@ -497,6 +497,7 @@ header .header__text p br {
 .stock .stock__container {
   margin-top: 5rem;
   text-align: center;
+  z-index: 1;
 }
 @media (min-width: 64rem) {
   .stock .stock__container {
@@ -527,8 +528,13 @@ header .header__text p br {
   color: white;
   z-index: 0;
 }
+.stock .stock__container .stock__title__container h4,
+.stock .stock__container .stock__title__container h2 {
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
 
 .stock__imgdisplay {
+  overflow-y: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -554,24 +560,28 @@ header .header__text p br {
   all: unset;
   z-index: 1;
   position: absolute;
-  height: 100%;
+  height: 150%;
+  bottom: 0;
   width: 20%;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.838) 19%, rgba(0, 0, 0, 0) 100%);
-  left: 0;
 }
 .stock__imgdisplay .imgdisplay__back svg,
 .stock__imgdisplay .imgdisplay__next svg {
   position: absolute;
-  left: 0;
+  width: 30%;
   top: 50%;
-  width: 50%;
   fill: var(--clr-pr);
   stroke: red;
   stroke-width: 5px;
 }
+.stock__imgdisplay .imgdisplay__back {
+  left: 0;
+}
+.stock__imgdisplay .imgdisplay__back svg {
+  left: 0;
+}
 .stock__imgdisplay .imgdisplay__next {
   background: linear-gradient(270deg, rgba(0, 0, 0, 0.838) 19%, rgba(0, 0, 0, 0) 100%);
-  left: auto;
   right: 0;
 }
 .stock__imgdisplay .imgdisplay__img {
