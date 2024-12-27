@@ -1,27 +1,19 @@
 const mm = gsap.matchMedia();
 
-function leftToRight(item){
+function leftToRight(item, stagger, topBottom){
+
    gsap.from(item,{
     x: "-100%",
     duration: .8,
+    delay: stagger,
     scrollTrigger:{
         trigger: item,
-        start: "top 80%",
-        end: "top 80%",
+        start: `top ${topBottom}`,
+        end: `top ${topBottom}`,
+        // markers: true
     }
    })
 }
-
-// gsap.from(".us__content",{
-//     x: "-100%",
-//     duration: .8,
-//     scrollTrigger:{
-//         trigger: ".us__content",
-//         start: "top 80%",
-//         end: "top 80%",
-//         markers: true
-//     }
-//    })
 
 const testiCards = document.querySelectorAll(".testimonial__card");
 const usContent = document.querySelector(".us__content");
@@ -31,21 +23,24 @@ const usCards = document.querySelectorAll(".us__card")
 mm.add("(max-width: 768px)", ()=> {
 
     testiCards.forEach((item) => {
-        leftToRight(item);
+
+        leftToRight(item, 1, "90%");
     })
     usCards.forEach((item) => {
-        leftToRight(item);
+        leftToRight(item, 0, "100%");
     })
     
     
 });
 
 mm.add("(min-width: 769px)", ()=> {
-    testiCards.forEach((item) => {
-        leftToRight(item);
+    testiCards.forEach((item, i) => {
+        let staggTime = i * .1;
+
+        leftToRight(item, staggTime,"90%");
     })
 
-    leftToRight(usContent)
+    leftToRight(usContent, 0, "90%")
 
 
 
