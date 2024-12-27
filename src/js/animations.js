@@ -24,7 +24,7 @@ mm.add("(max-width: 768px)", ()=> {
 
     testiCards.forEach((item) => {
 
-        leftToRight(item, 1, "90%");
+        leftToRight(item, 0, "90%");
     })
     usCards.forEach((item) => {
         leftToRight(item, 0, "100%");

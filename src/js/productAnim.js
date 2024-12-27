@@ -1,5 +1,5 @@
 const productImage = document.getElementById("productImg")
-const productBg = document.getElementById("stock00")
+const productBg = document.getElementById("productBg")
 const productName = document.getElementById("productName")
 const productDescript_1 = document.getElementById("productDescript-1")
 const productDescript_2 = document.getElementById("productDecript-2")
@@ -35,18 +35,14 @@ function preloadImages() {
 }
 preloadImages();
 
-// productBg.style.backgroundImage = preloadedImages[1];
-    
-// ]
 let currentIndex = 0; 
 
-// url("/src/assets/img/componentesHardware/gtx1080.png")
 
 function updateImage(index) {
     productImage.src = productImgs[index];
-    productBg.style.backgroundImage = 'url("../../'+productImgs[index]+'")';
-    // console.log( 'url("../'+productImgs[index]+'")');
-    
+    productBg.src = productImgs[index];
+    // productBg.style.backgroundImage = `url('${productImgs[index]}')`;
+
     productName.innerText = productNames[index];
     productDescript_1.innerText = productDescripts_1[index];
 }
@@ -62,11 +58,17 @@ nextButton.addEventListener("click", (event) => {
             x: "-100%",
             duration: .5,
             onComplete: () =>{
+                // productBg.style.backgroundImage = `url('${productImgs[index]}')`;
                 currentIndex++;
                 updateImage(currentIndex);
-
+                // gsap.fromTo(productBg[img], {
+                //     opacity:0,
+                //     duration: .5
+                // },{
+                //     opacity: 1 , 
+                //     duration: .5
+                // })
                 gsap.fromTo(productImage,{
-                    delay: .5,
                     x: "100%",
                     duration :.5
                 },{
@@ -89,7 +91,6 @@ backButton.addEventListener("click", (event) => {
     if (currentIndex > 0) {
 
         gsap.to(productImage,{
-            delay: .5,
             x: "100%",
             duration: .5,
             onComplete: () => {

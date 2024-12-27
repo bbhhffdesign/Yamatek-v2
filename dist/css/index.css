@@ -481,25 +481,18 @@ header .header__text p br {
   position: relative;
   background-color: black;
   margin-top: 10rem;
-  background-image: url("/src/assets/img/componentesHardware/gtx1080.png");
-  background-position: center;
-}
-.stock::before {
-  position: absolute;
-  content: "";
-  inset: 0;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  -webkit-backdrop-filter: grayscale(1);
-          backdrop-filter: grayscale(1);
-  width: 100%;
 }
 @media (min-width: 64rem) {
   .stock {
     margin-top: 0;
   }
+}
+.stock .bg__product {
+  position: absolute;
+  height: 100%;
+  left: -30%;
+  width: auto;
+  filter: grayscale(1);
 }
 .stock .stock__container {
   margin-top: 5rem;
@@ -532,6 +525,7 @@ header .header__text p br {
 }
 .stock .stock__container .stock__title__container {
   color: white;
+  z-index: 0;
 }
 
 .stock__imgdisplay {
@@ -561,22 +555,27 @@ header .header__text p br {
   z-index: 1;
   position: absolute;
   height: 100%;
-  width: 10%;
-  background-color: rgba(255, 255, 255, 0.328);
+  width: 20%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.838) 19%, rgba(0, 0, 0, 0) 100%);
   left: 0;
 }
-.stock__imgdisplay .imgdisplay__back {
-  -webkit-clip-path: polygon(53% 50%, 100% 62%, 99% 38%);
-          clip-path: polygon(53% 50%, 100% 62%, 99% 38%);
+.stock__imgdisplay .imgdisplay__back svg,
+.stock__imgdisplay .imgdisplay__next svg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 50%;
+  fill: var(--clr-pr);
+  stroke: red;
+  stroke-width: 5px;
 }
 .stock__imgdisplay .imgdisplay__next {
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.838) 19%, rgba(0, 0, 0, 0) 100%);
   left: auto;
   right: 0;
-  -webkit-clip-path: polygon(53% 50%, 1% 62%, 0 38%);
-          clip-path: polygon(53% 50%, 1% 62%, 0 38%);
 }
 .stock__imgdisplay .imgdisplay__img {
-  filter: drop-shadow(0 0 10px #ffffff);
+  filter: drop-shadow(0 0 10px var(--clr-pr));
 }
 .stock__imgdisplay .product__card {
   position: relative;
