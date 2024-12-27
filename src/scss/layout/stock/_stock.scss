@@ -124,6 +124,9 @@
     position: relative;
     padding: 1rem 0;
     max-width: 320px;
+    @include breakPoint($dev-lg){
+      padding: 0;
+    }
 
 
     ul{

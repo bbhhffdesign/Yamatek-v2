@@ -14,10 +14,40 @@ function leftToRight(item, stagger, topBottom){
     }
    })
 }
+// function bottomToTop(item, stagger, topBottom){
+
+//    gsap.from(item,{
+//     y: "105%",
+//     duration: .8,
+//     delay: stagger,
+//     // scrollTrigger:{
+//     //     trigger: item,
+//     //     start: `top ${topBottom}`,
+//     //     end: `top ${topBottom}`,
+//     //     markers: true
+//     // }
+//    })
+// }
+
+function bottomToTopGroup(items, stagger, topBottom) {
+    gsap.from(items, {
+        y: "105%",
+        duration: 0.8,
+        stagger: stagger, // Escalona la animación entre los elementos
+        scrollTrigger: {
+            trigger: items[0], // Usar el primer elemento como punto de referencia
+            start: `top ${topBottom}`,
+            end: `top ${topBottom}`,
+            markers: true,
+        },
+    });
+}
 
 const testiCards = document.querySelectorAll(".testimonial__card");
 const usContent = document.querySelector(".us__content");
 const usCards = document.querySelectorAll(".us__card")
+
+const chartBars = document.querySelectorAll(".chart__bar")
 
 
 mm.add("(max-width: 768px)", ()=> {
@@ -39,8 +69,15 @@ mm.add("(min-width: 769px)", ()=> {
 
         leftToRight(item, staggTime,"90%");
     })
+    leftToRight(usContent, 0, "90%");
+    
+    // chartBars.forEach((item, i) => {
+    //     let staggTime = i*.2;
+    //     bottomToTop(item,staggTime, "110%")
+    // })
 
-    leftToRight(usContent, 0, "90%")
+    bottomToTopGroup(chartBars, 0.2, "100%");
+
 
 
 

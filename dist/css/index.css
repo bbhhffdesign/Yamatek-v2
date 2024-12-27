@@ -393,17 +393,18 @@ header .header__text p br {
     gap: none;
   }
 }
-.us .piechart__container {
+.us .chart__container {
   display: none;
 }
 @media (min-width: 64rem) {
-  .us .piechart__container {
+  .us .chart__container {
     display: block;
     width: 100%;
-  }
-  .us .piechart__container #myChart {
-    height: inherit;
-    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: none;
   }
 }
 
@@ -591,6 +592,11 @@ header .header__text p br {
   position: relative;
   padding: 1rem 0;
   max-width: 320px;
+}
+@media (min-width: 64rem) {
+  .stock__imgdisplay .product__card {
+    padding: 0;
+  }
 }
 .stock__imgdisplay .product__card ul {
   margin: 0;
