@@ -48,6 +48,7 @@ nextButton.addEventListener("click", (event) => {
                 updateImage(currentIndex);
 
                 gsap.fromTo(productImage,{
+                    delay: .5,
                     x: "100%",
                     duration :.5
                 },{
@@ -71,6 +72,7 @@ backButton.addEventListener("click", (event) => {
     if (currentIndex > 0) {
 
         gsap.to(productImage,{
+            delay: .5,
             x: "100%",
             duration: .5,
             onComplete: () => {

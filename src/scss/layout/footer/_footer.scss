@@ -41,7 +41,7 @@ footer{
     @include flex(column, center, center, none);
     position: absolute;
     bottom: 1rem;
-    right: 1rem;
+    left: 1rem;
     
     .logo__text{
         margin: 0;
