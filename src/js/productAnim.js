@@ -12,7 +12,7 @@ const preloadedImages = [];
 
 const productImgs = [
     "src/assets/img/componentesHardware/gtx1080.png",
-    "src/assets/img/componentesHardware/gtx1650_squared.png",
+    "src/assets/img/componentesHardware/gtx1650_squared-rot.png",
     "src/assets/img/componentesHardware/intelI9.png"
 ]
 const productNames = [
