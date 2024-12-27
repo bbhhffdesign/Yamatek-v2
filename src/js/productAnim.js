@@ -44,7 +44,7 @@ let currentIndex = 0;
 
 function updateImage(index) {
     productImage.src = productImgs[index];
-    productBg.style.backgroundImage = 'url("../'+productImgs[index]+'")';
+    productBg.style.backgroundImage = 'url("../../'+productImgs[index]+'")';
     // console.log( 'url("../'+productImgs[index]+'")');
     
     productName.innerText = productNames[index];
