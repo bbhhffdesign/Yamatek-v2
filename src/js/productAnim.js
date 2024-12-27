@@ -5,6 +5,10 @@ const productDescript_2 = document.getElementById("productDecript-2")
 const backButton = document.querySelector(".imgdisplay__back");
 const nextButton = document.querySelector(".imgdisplay__next");
 
+
+const preloadedImages = [];
+
+
 const productImgs = [
     "src/assets/img/componentesHardware/gtx1080.png",
     "src/assets/img/componentesHardware/gtx1650.png",
@@ -20,7 +24,15 @@ const productDescripts_1 = [
     "GPU compacta y eficiente de NVIDIA, ideal para gaming en 1080p, con 4 GB de memoria GDDR5, enfocada en rendimiento y bajo consumo energético.",
     "Procesador de gama alta de Intel, con múltiples núcleos e hilos, diseñado para cargas de trabajo intensivas como edición de video, diseño 3D y gaming extremo."
 ]
-// const productDescripts_2 = [
+
+function preloadImages() {
+    productImgs.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+        preloadedImages.push(img);
+    });
+}
+preloadImages();
     
 // ]
 let currentIndex = 0; 
@@ -29,7 +41,6 @@ function updateImage(index) {
     productImage.src = productImgs[index];
     productName.innerText = productNames[index];
     productDescript_1.innerText = productDescripts_1[index];
-    // productDescript_2.innerText = productDescripts_2[index];
 }
 
 nextButton.addEventListener("click", (event) => {
