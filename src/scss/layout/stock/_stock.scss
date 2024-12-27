@@ -8,6 +8,18 @@
   background-image: url("/src/assets/img/componentesHardware/gtx1080.png");
   background-position: center;
   
+  &::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: grayscale(1);
+    width: 100%;
+  }
+  
   
   @include breakPoint($dev-lg){
     margin-top: 0;
@@ -47,6 +59,7 @@
 
 .stock__imgdisplay {
   position: relative;
+  // overflow: visible;
   @include flex(column, center, center, none);
 
   .imgdisplay__container{
@@ -90,7 +103,9 @@
   }
 
   .imgdisplay__img {
-    filter: drop-shadow(0 0 20px #f7921e8f);
+
+    filter: drop-shadow(0 0 10px #ffffff);
+    // filter: drop-shadow(0 0  25px #000000) grayscale(1);
   }
 
   .product__card {
