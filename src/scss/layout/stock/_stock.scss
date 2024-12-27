@@ -115,11 +115,16 @@
     max-width: 320px;
 
 
-   
-
     ul{
-        padding: 0;
+      margin: 0;
+      padding: 1rem 2rem 2rem 2rem;
+      background-color: #0000005e;
+      backdrop-filter: blur(4px);
+      border-radius: 1rem;
+
         li{
+          margin: 0;
+          padding: 0;
             list-style: square;
         }
     }
