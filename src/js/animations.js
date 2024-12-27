@@ -14,20 +14,6 @@ function leftToRight(item, stagger, topBottom){
     }
    })
 }
-// function bottomToTop(item, stagger, topBottom){
-
-//    gsap.from(item,{
-//     y: "105%",
-//     duration: .8,
-//     delay: stagger,
-//     // scrollTrigger:{
-//     //     trigger: item,
-//     //     start: `top ${topBottom}`,
-//     //     end: `top ${topBottom}`,
-//     //     markers: true
-//     // }
-//    })
-// }
 
 function bottomToTopGroup(items, stagger, topBottom) {
     gsap.from(items, {
@@ -38,7 +24,7 @@ function bottomToTopGroup(items, stagger, topBottom) {
             trigger: items[0], // Usar el primer elemento como punto de referencia
             start: `top ${topBottom}`,
             end: `top ${topBottom}`,
-            markers: true,
+            // markers: true,
         },
     });
 }

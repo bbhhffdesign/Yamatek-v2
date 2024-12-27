@@ -11,9 +11,9 @@ const preloadedImages = [];
 
 
 const productImgs = [
-    "src/assets/img/componentesHardware/gtx1080.png",
-    "src/assets/img/componentesHardware/gtx1650_squared-rot.png",
-    "src/assets/img/componentesHardware/intelI9.png"
+    "src/assets/img/componentesHardware/ajustadas/rtx1080-squared.png",
+    "src/assets/img/componentesHardware/ajustadas/rtx1650-squared.png",
+    "src/assets/img/componentesHardware/ajustadas/i9-squared.png"
 ]
 const productNames = [
     "GeForce GTX 1080",
@@ -41,75 +41,58 @@ let currentIndex = 0;
 function updateImage(index) {
     productImage.src = productImgs[index];
     productBg.src = productImgs[index];
-    // productBg.style.backgroundImage = `url('${productImgs[index]}')`;
-
     productName.innerText = productNames[index];
     productDescript_1.innerText = productDescripts_1[index];
 }
-
-nextButton.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    const currentScroll = window.scrollY;
-
-    if (currentIndex < productImgs.length - 1) {
-        
-        gsap.to(productImage,{ 
-            x: "-100%",
-            duration: .5,
-            onComplete: () =>{
-                // productBg.style.backgroundImage = `url('${productImgs[index]}')`;
-                currentIndex++;
-                updateImage(currentIndex);
-                // gsap.fromTo(productBg[img], {
-                //     opacity:0,
-                //     duration: .5
-                // },{
-                //     opacity: 1 , 
-                //     duration: .5
-                // })
-                gsap.fromTo(productImage,{
-                    x: "100%",
-                    duration :.5
-                },{
-                    x: "0%",
-                    duration: .5,
-                    onUpdate: () => window.scrollTo(0, currentScroll)
-                })
-            }            
-        })
-
-
-    }
-});
 
 backButton.addEventListener("click", (event) => {
     event.preventDefault();
 
     const currentScroll = window.scrollY;
 
-    if (currentIndex > 0) {
+    gsap.to(productImage, {
+        x: "200%",
+        duration: .5,
+        onComplete: () => {
+            currentIndex = (currentIndex - 1 + productImgs.length) % productImgs.length;
 
-        gsap.to(productImage,{
-            x: "100%",
-            duration: .5,
-            onComplete: () => {
-                currentIndex--;
-                updateImage(currentIndex);
-
-                gsap.fromTo(productImage,{
-                    x: "-100%",
-                    duration :.5
-                },{
-                    x: "0%",
-                    duration: .5,
-                    onUpdate: () => window.scrollTo(0, currentScroll)
-                })
-            }
-        })
-
-    }
+            gsap.fromTo(productImage, {
+                x: "-100%",
+                duration: .5
+            }, {
+                x: "0%",
+                duration: .5,
+                onUpdate: () => window.scrollTo(0, currentScroll)
+            });
+        }
+    });
 });
+
+
+nextButton.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const currentScroll = window.scrollY;
+
+    gsap.to(productImage, { 
+        x: "-200%",
+        duration: .5,
+        onComplete: () => {
+            currentIndex = (currentIndex + 1) % productImgs.length;
+            updateImage(currentIndex);
+
+            gsap.fromTo(productImage, {
+                x: "100%",
+                duration: .5
+            }, {
+                x: "0%",
+                duration: .5,
+                onUpdate: () => window.scrollTo(0, currentScroll)
+            });
+        }
+    });
+});
+
 
 
 
