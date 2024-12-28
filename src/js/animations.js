@@ -1,18 +1,18 @@
 const mm = gsap.matchMedia();
 
-function leftToRight(item, stagger, topBottom){
+function leftToRight(item, stagger, topBottom) {
 
-   gsap.from(item,{
-    x: "-130%",
-    duration: .8,
-    delay: stagger,
-    scrollTrigger:{
-        trigger: item,
-        start: `top ${topBottom}`,
-        end: `top ${topBottom}`,
-        // markers: true
-    }
-   })
+    gsap.from(item, {
+        x: "-130%",
+        duration: .8,
+        delay: stagger,
+        scrollTrigger: {
+            trigger: item,
+            start: `top ${topBottom}`,
+            end: `top ${topBottom}`,
+            // markers: true
+        }
+    })
 }
 
 function bottomToTopGroup(items, stagger, topBottom) {
@@ -32,11 +32,14 @@ function bottomToTopGroup(items, stagger, topBottom) {
 const testiCards = document.querySelectorAll(".testimonial__card");
 const usContent = document.querySelector(".us__content");
 const usCards = document.querySelectorAll(".us__card")
-
 const chartBars = document.querySelectorAll(".chart__bar")
+const deskItems = document.querySelectorAll(".test__img");
+const testominialsContainer = document.querySelector(".testimonials__img__container")
 
 
-mm.add("(max-width: 768px)", ()=> {
+
+
+mm.add("(max-width: 768px)", () => {
 
     testiCards.forEach((item) => {
 
@@ -45,18 +48,36 @@ mm.add("(max-width: 768px)", ()=> {
     usCards.forEach((item) => {
         leftToRight(item, 0, "100%");
     })
-    
-    
+
+
 });
 
-mm.add("(min-width: 769px)", ()=> {
+mm.add("(min-width: 769px)", () => {
+    let timeline = gsap.timeline({ paused: true });
+
+    deskItems.forEach((item, i) => {
+        if (i % 2 == 1) {
+            timeline.from(item, { opacity: 0, duration: .5 }, "<")
+            timeline.from(item, { x: "200%", duration: 1 }, "<")
+        } else {
+            timeline.from(item, { opacity: 0, duration: .5 }, "<")
+            timeline.from(item, { x: "-150%", duration: 1, delay: 0 }, "<")
+        }
+    })
+
+    ScrollTrigger.create({
+        trigger: testominialsContainer,
+        start: "top 70%",
+        end: "bottom 70%",
+        onEnter: () => { timeline.play() }
+    });
     testiCards.forEach((item, i) => {
         let staggTime = i * .1;
 
-        leftToRight(item, staggTime,"90%");
+        leftToRight(item, staggTime, "90%");
     })
     leftToRight(usContent, 0, "90%");
-    
+
     // chartBars.forEach((item, i) => {
     //     let staggTime = i*.2;
     //     bottomToTop(item,staggTime, "110%")
