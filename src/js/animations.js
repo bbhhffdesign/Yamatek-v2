@@ -3,7 +3,7 @@ const mm = gsap.matchMedia();
 function leftToRight(item, stagger, topBottom){
 
    gsap.from(item,{
-    x: "-100%",
+    x: "-130%",
     duration: .8,
     delay: stagger,
     scrollTrigger:{

@@ -75,9 +75,11 @@
     .imgdisplay__img{
       width: 100%;
       height: auto;
+      padding: 1rem;
+      filter: drop-shadow(0 0 10px var(--clr-pr));
 
       @include breakPoint($dev-lg){
-        width: 40%
+        width: 30%
       }
     }
 
@@ -118,10 +120,6 @@
       right: 0;
     }
 
-  }
-
-  .imgdisplay__img {
-    filter: drop-shadow(0 0 10px var(--clr-pr));
   }
 
   .product__card {

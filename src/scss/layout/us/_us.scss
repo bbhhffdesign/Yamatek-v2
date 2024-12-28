@@ -3,6 +3,7 @@
 
 .us{   
     .pure-g{
+        position: relative;
         @include breakPoint($dev-lg){
             @include flex(row-reverse, center, center, none);
         }
@@ -15,15 +16,11 @@
 
         @include breakPoint($dev-lg){
             display: block;
-            width: 100%;
+            width: 70%;
+            height: auto;
+            flex: 1;
             @include flex (column, center, center, none);
             
-            // img{
-            //     display: block;
-            //     width: 90%;
-            //     height: auto;
-            // }
-
         }
     }
 }
@@ -37,7 +34,9 @@
         }
     }
     @include breakPoint($dev-lg){
+        // height: 150%;
         box-sizing: border-box;
+        height: 100vh;
         @include flex(column, center, center, none);
         text-align: center;
         padding: 3rem;

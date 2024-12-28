@@ -29,7 +29,12 @@
           margin-top: 5rem;
           display: block;
           width: 100%;
-          height: auto;
+
+          svg{
+            width: 100%;
+            height: auto;
+            overflow: visible;
+          }
         }
         @include breakPoint($dev-xxlg){
           margin-top: 0;
