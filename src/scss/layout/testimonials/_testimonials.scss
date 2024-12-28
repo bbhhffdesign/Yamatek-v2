@@ -71,7 +71,8 @@
       content: "";
       position: absolute;
       inset: 0;
-      backdrop-filter: blur(2px);
+      // backdrop-filter: blur(2px);
+      backdrop-filter: grayscale(1);
       z-index: -1;
     }
 
@@ -87,13 +88,13 @@
         100% 0,
         100% 66%,
         86% 100%,
-        14% 100%,
+        14% 100%, 
         0 100%,
         0 34%
       );
-      &::before {
-        background-color: #ffffff6c;
-      }
+      // &::before {
+      //   // background-color: #ffffff6c;
+      // }
 
       img {
         align-self: flex-end;
@@ -112,7 +113,7 @@
         0 0
       );
       &::before {
-        background-color: #5f5f5f5b;
+        background-color: #ffffff8d;
       }
       h4 {
         text-align: right;
