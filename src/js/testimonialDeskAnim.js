@@ -17,6 +17,5 @@ ScrollTrigger.create({
     trigger: testominialsContainer,
     start: "top 70%",
     end: "bottom 70%",
-    markers: true,
     onEnter: () => {timeline.play()}
 });
