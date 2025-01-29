@@ -7,10 +7,12 @@
     align-items: center;
     width: fit-content;
     margin: 2rem auto;
-    padding: 0 .5rem .5rem .5rem 0;
+    padding: 0rem 1rem 0rem 0;
+    border-top-left-radius: var(--txt-sm);
+    border-bottom-left-radius: var(--txt-sm);
     background-color: var(--clr-grey);
-    border-radius: var(--txt-sm);
-
+    clip-path: polygon(0 1%, 100% 0%, 95% 100%, 0% 100%);
+    
     @include breakPoint($dev-lg){
         margin: 2rem 0;
         justify-self: end;
