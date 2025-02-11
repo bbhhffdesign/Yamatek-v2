@@ -254,7 +254,7 @@ li strong {
 }
 .wrapper {
   height: auto;
-  background-image: url(../../src/assets/img/graph-paper-white.svg);
+  background-image: url(./assets/img/graph-paper-white.svg);
   background-repeat: repeat;
   background-size: auto;
   background-color: var(--clr-pr);
@@ -841,7 +841,7 @@ header .header__text p br {
 .parallax {
   position: relative;
   background-color: var(--clr-orange);
-  background-image: url("../../src/assets/img/Footer.svg");
+  background-image: url("./assets/img/Footer.svg");
   background-attachment: fixed;
   background-position: 50% 95%;
   background-repeat: no-repeat;
